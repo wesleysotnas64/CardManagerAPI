@@ -1,0 +1,57 @@
+
+# .NET build / Visual Studio build
+obj/
+bin/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.vs/
+
+# .NET Test Results
+TestResults/
+
+# .NET publish
+publish/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# Temp files
+*.[Oo]bj/
+*.dotnet-*
+*.user
+*.tmp
+*.temp
+
+# Visual Studio code coverage
+*.coverage
+*.coveragexml
+
+# MSTest test Results
+TestResults/
+
+# .NET Core
+project.assets.json
+
+# Misc
+Thumbs.db
+Desktop.ini
+
+# Ignore the bin and obj directories for multiple projects
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache files
+*.vs/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS 2019 cache/options directory
+.vsconfig
