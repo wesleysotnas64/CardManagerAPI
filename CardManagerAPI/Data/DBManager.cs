@@ -12,7 +12,7 @@ namespace CardManagerAPI.Data
 
         public DBManager()
         {
-            pathFile = "C:Caminho\\CardManagerAPI\\CardManagerAPI\\Data\\data.json";
+            pathFile = Directory.GetCurrentDirectory() + "\\Data\\data.json";
             data = new List<Card>();
             LoadData();
         }
