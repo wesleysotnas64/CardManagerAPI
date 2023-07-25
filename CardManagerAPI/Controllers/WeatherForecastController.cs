@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using CardManagerAPI.Data;
+using CardManagerAPI.Models;
 
 namespace CardManagerAPI.Controllers
 {
@@ -21,6 +23,13 @@ namespace CardManagerAPI.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            Card card = new Card();
+            List<Card> list = new List<Card>();
+            DBManager dbm = new DBManager();
+
+            card = dbm.GetCard(2);
+            list = dbm.GetAllCards();
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
