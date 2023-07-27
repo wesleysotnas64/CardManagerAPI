@@ -17,6 +17,16 @@ namespace CardManagerAPI.Controllers
 
             return Ok(card);
         }
+
+        [HttpPost("add-card")]
+        public IActionResult AddCard(Card card)
+        {
+            DBManager dbm = new DBManager();
+
+            dbm.AddCard(card);
+
+            return CreatedAtAction(nameof(GetCard), new { id = card.Id }, card);
+        }
     }
 
 }
