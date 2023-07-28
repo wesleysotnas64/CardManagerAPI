@@ -8,6 +8,16 @@ namespace CardManagerAPI.Controllers
     [Route("card-manager-api/")]
     public class CardController : ControllerBase
     {
+        [HttpGet("get-all-cards")]
+        public IActionResult GetAllCards()
+        {
+            DBManager dbm = new DBManager();
+
+            List<Card> cards = dbm.GetAllCards();
+
+            return Ok(cards);
+        }
+
         [HttpGet("get-card/id")]
         public IActionResult GetCard(int id)
         {
