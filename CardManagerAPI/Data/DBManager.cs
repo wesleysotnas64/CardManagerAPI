@@ -24,6 +24,20 @@ namespace CardManagerAPI.Data
             SaveData();
         }
 
+        public void DeleteCard(int cardId)
+        {
+            foreach(Card c in data)
+            {
+                if(c.Id == cardId)
+                {
+                    data.Remove(c);
+                    break;
+                }
+            }
+
+            SaveData();
+        }
+
         public void SaveData()
         {
             try

@@ -27,6 +27,16 @@ namespace CardManagerAPI.Controllers
 
             return CreatedAtAction(nameof(GetCard), new { id = card.Id }, card);
         }
+
+        [HttpDelete("delete-card/cardid")]
+        public IActionResult DeleteCard(int cardid)
+        {
+            DBManager dbm = new DBManager();
+
+            dbm.DeleteCard(cardid);
+
+            return NoContent();
+        }
     }
 
 }
