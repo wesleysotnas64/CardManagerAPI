@@ -82,5 +82,18 @@ namespace CardManagerAPI.Data
         {
             return data;
         }
+
+        public void UpdateCard(Card card)
+        {
+            for(int i = 0; i < data.Count; i++)
+            {
+                if (data[i].Id == card.Id)
+                {
+                    data[i] = card;
+                    break;
+                }
+            }
+            SaveData();
+        }
     }
 }

@@ -47,6 +47,16 @@ namespace CardManagerAPI.Controllers
 
             return NoContent();
         }
+
+        [HttpPut("update-card")]
+        public IActionResult UpdateCard(Card card)
+        {
+            DBManager dbm = new DBManager();
+
+            dbm.UpdateCard(card);
+
+            return NoContent();
+        }
     }
 
 }
