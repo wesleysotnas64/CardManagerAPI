@@ -95,5 +95,14 @@ namespace CardManagerAPI.Data
             }
             SaveData();
         }
+
+        public Card GetRandomCard()
+        {
+            Random random = new Random();
+
+            int i = random.Next(0, data.Count);
+
+            return data[i];
+        }
     }
 }

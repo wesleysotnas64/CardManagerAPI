@@ -57,6 +57,15 @@ namespace CardManagerAPI.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("get-random-card")]
+        public IActionResult GetRandomCard()
+        {
+            DBManager dbm = new DBManager();
+            Card card = dbm.GetRandomCard();
+
+            return Ok(card);
+        }
     }
 
 }
